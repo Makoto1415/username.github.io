@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #DA63F8;
+  --text-color: #9b9b9b;
+  --bg-dark: #0e0e0e;
+  --bg-card: #1a1a1a;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-dark);
+  color: white;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(82, 154, 255, 0.25);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+h3.lumbang-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.lumbang-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+}
+
+.lumbang-item-preTitle {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.lumbang-item-title {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.lumbang-item-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.lumbang-container {
+  max-width: 1380px;
+  margin: 3rem auto;
+  padding: 4rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .lumbang-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
+  }
+}
+
+.lumbang-profile {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.lumbang-profileImg img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin: 0 auto 1rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lumbang-profileImg img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(218, 99, 248, 0.4);
+}
+
+.lumbang-fname {
+  font-weight: 200;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  text-transform: uppercase;
+  display: block;
+  color: white;
+  margin-bottom: -0.5rem;
+}
+
+.lumbang-lname {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+  color: var(--primary-color);
+  display: block;
+}
+
+.lumbang-profile-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.lumbang-left-container,
+.lumbang-right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.lumbang-skills,
+.lumbang-reference,
+.lumbang-education,
+.lumbang-awards,
+.lumbang-experience,
+.lumbang-seminars,
+.lumbang-interest {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lumbang-reference-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.lumbang-skills:hover,
+.lumbang-reference:hover,
+.lumbang-education:hover,
+.lumbang-awards:hover,
+.lumbang-experience:hover,
+.lumbang-seminars:hover,
+.lumbang-interest:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(218, 99, 248, 0.4);
+}
+
+.lumbang-skills-list {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.lumbang-edu-item,
+.lumbang-awards-item,
+.lumbang-experience-item,
+.lumbang-seminars-item {
+  margin-top: 3.1rem;
+}
+
+.lumbang-ref-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.lumbang-interest-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin: 1rem;
+  margin-bottom: 3rem;
+  transition: color 0.3s ease;
+}
+
+.lumbang-interest-item svg,
+.lumbang-interest-item i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.lumbang-interest-item:hover {
+  color: var(--primary-color);
+}
+
+hr {
+  grid-column: 1/-1;
+  border: none;
+  border-top: 2px solid rgba(128, 128, 128, 0.25);
+  margin: 3rem 0 2rem 0;
+}
+
+.lumbang-footer-icon {
+  grid-column: 1/-1;
+  background: var(--bg-dark);
+  padding: 3rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.lumbang-contact,
+.lumbang-social {
+  flex: 1;
+  min-width: 250px;
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.lumbang-contact-info p {
+  font-size: 1.4rem;
+  margin: 0.4rem 0;
+  color: var(--text-color);
+}
+
+.lumbang-social-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.lumbang-social-item:hover {
+  color: var(--primary-color);
+}
+
+.lumbang-social-item img {
+  width: 20px;
+  height: 20px;
+}
+
+
